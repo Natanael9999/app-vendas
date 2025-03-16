@@ -18,16 +18,16 @@ export async function GET(){
    }
 }
 
-export async function POST(){
+export async function POST(request) {
+    try {
+        const db = await createConnection();
+        const sql = "INSERT INTO Cliente (nome, endereco, cidade) VALUES (?, ?, ?)";
+        const { nome, endereco, cidade } = await request.json();
+        await db.query(sql, [nome, endereco, cidade]);
 
-    try{
-        const db = await createConnection()
-        const sql = "insert into Cliente (nome, endereco, cidade) values (?, ?, ?)"
-        const {nome, endereco, cidade} = await Request.json();
-        await db.query(sql,[nome, endereco, cidade])
-
-        return NextResponse.json({message: "CLiente inserido com sucesso"})
-    } catch (error){
-        return NextResponse.json({erro: error.message})
+        return NextResponse.json({ message: "Cliente inserido com sucesso" });
+    } catch (error) {
+        console.log(error);
+        return NextResponse.json({ erro: error.message });
     }
 }

@@ -26,7 +26,7 @@ export async function POST(){
         const {valor, quantidade} = await Request.json();
         await db.query(sql,[valor, quantidade])
 
-        return NextResponse.json({message: "Local inserido com sucesso"})
+        return NextResponse.json({message: "Compra inserida com sucesso"})
     } catch (error){
         return NextResponse.json({erro: error.message})
     }

@@ -1,0 +1,16 @@
+.text{
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+    font-size: 18px;
+}
+.footer {
+    display: flex;
+    justify-content: center;  /* Centraliza na horizontal */
+    align-items: center;      /* Centraliza na vertical */
+    text-align: center;       /* Alinha o texto dentro dos itens */
+    width: 100%;              /* Garante que o footer ocupe toda a largura */
+    margin-top: 5%;
+}
