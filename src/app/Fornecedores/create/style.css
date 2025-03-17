@@ -1,0 +1,70 @@
+/* Estilização geral */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Fundo mais claro */
+}
+
+.formulario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    border-top: 5px solid #ffa500;
+}
+
+/* Campos de entrada */
+.input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #ffa500;
+    box-shadow: 0 0 5px rgba(255, 140, 0, 0.3);
+}
+
+/* Estilização dos botões */
+.botao {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+/* Botão Enviar (Verde mais suave) */
+.botao-enviar {
+    background-color: #28a745;
+    color: white;
+}
+
+.botao-enviar:hover {
+    background-color: #218838;
+}
+
+/* Botão Retornar (Cinza mais discreto) */
+.botao-retornar {
+    background-color: #6c757d;
+    color: white;
+}
+
+.botao-retornar:hover {
+    background-color: #5a6268;
+}

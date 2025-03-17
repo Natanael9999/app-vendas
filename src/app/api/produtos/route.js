@@ -18,12 +18,12 @@ export async function GET(){
    }
 }
 
-export async function POST(){
+export async function POST(request){
 
     try{
         const db = await createConnection()
-        const sql = "insert into Local (nome, preco, quantidade) values (?,?,?)"
-        const {nome, preco, quantidade} = await Request.json();
+        const sql = "insert into Produto (nome, preco, quantidade) values (?,?,?)"
+        const {nome, preco, quantidade} = await request.json();
         await db.query(sql,[nome, preco, quantidade])
 
         return NextResponse.json({message: "Produto inserido com sucesso"})

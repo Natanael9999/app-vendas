@@ -18,12 +18,12 @@ export async function GET(){
    }
 }
 
-export async function POST(){
+export async function POST(request){
 
     try{
         const db = await createConnection()
         const sql = "insert into Venda (valor) values (?)"
-        const {valor} = await Request.json();
+        const {valor} = await request.json();
         await db.query(sql,[valor])
 
         return NextResponse.json({message: "Venda inserida com sucesso"})
